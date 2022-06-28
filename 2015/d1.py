@@ -1,14 +1,14 @@
 from colors import color
 
 part = input("Which part are you solving: ")
-input = input("Your input: ")
+i = input("Your i: ")
 
 floor = 0
 
 # PART 1
 if part == "1":
 
-    for char in input:
+    for char in i:
         if char == "(": floor += 1
         else: floor -= 1
 
@@ -17,13 +17,13 @@ if part == "1":
 # PART 2
 elif part == "2":
 
-    i = 0
-    for char in input:
+    cp = 0
+    for char in i:
         if char == "(": floor += 1
         else: floor -= 1
-        i += 1
+        cp += 1
         if floor < 0:
-            print (f"\nSanta first enter's the basement on character position {color.GREEN}{i}")
+            print (f"\nSanta first enter's the basement on character position {color.GREEN}{cp}")
             break
 
 print(color.WHITE)
