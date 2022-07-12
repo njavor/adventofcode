@@ -1,7 +1,7 @@
 from colors import color
 
+i = input("Your input: ")
 part = input("Which part are you solving: ")
-i = input("Your i: ")
 
 floor = 0
 
