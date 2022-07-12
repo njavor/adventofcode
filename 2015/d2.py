@@ -1,12 +1,12 @@
 from colors import color
 
-part = input("Which part are you solving: ")
 i = []
 print("Your input:")
 while True:
     line = input()
     if line: i.append(line)
     else: break
+part = input("Which part are you solving: ")
 
 # PART 1
 if part == "1":
