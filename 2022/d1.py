@@ -1,5 +1,4 @@
-elfs = []
-calories = 0
+elfs, calories = [], 0
 with open("input.txt", "r", encoding="utf8") as f:
     for sor in f:
         if sor == "\n":
@@ -8,5 +7,4 @@ with open("input.txt", "r", encoding="utf8") as f:
         else: calories += int(sor)
 
 elfs.sort(reverse=True)
-print(elfs[0])
-print(elfs[0]+elfs[1]+elfs[2])
+print(f"part 1: {elfs[0]}\npart 2: {elfs[0]+elfs[1]+elfs[2]}")
