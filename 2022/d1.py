@@ -1,5 +1,5 @@
 elfs, calories = [], 0
-with open("d1_input.txt", "r", encoding="utf8") as f:
+with open("input.txt", "r", encoding="utf8") as f:
     for sor in f:
         if sor == "\n":
             elfs.append(calories)

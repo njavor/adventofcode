@@ -21,7 +21,7 @@ def part2(sor):
     return res
 
 p1_score, p2_score = 0, 0
-with open("d2_input.txt", "r", encoding="utf8") as f:
+with open("input.txt", "r", encoding="utf8") as f:
     for sor in f:
         p1_score += part1(sor)
         p2_score += part2(sor)

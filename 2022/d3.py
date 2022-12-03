@@ -19,7 +19,7 @@ def part2(sor):
     return 0
 
 p1_sum, p2_sum = 0, 0
-with open("d3_input.txt", "r", encoding="utf8") as f:
+with open("input.txt", "r", encoding="utf8") as f:
     for sor in f:
         p1_sum += part1(sor)
         p2_sum += part2(sor)
