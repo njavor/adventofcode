@@ -1,4 +1,3 @@
-common = ""
 def part1(sor):
     compartments = ["", "", ""]
     compartments[0], compartments[1] = sor[:len(sor)//2], sor[len(sor)//2:]
