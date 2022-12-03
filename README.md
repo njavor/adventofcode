@@ -1,1 +1,1 @@
-# My [Advent of Code](https://adventofcode.com/)
+# My Advent of Code (https://adventofcode.com/)
