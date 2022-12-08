@@ -26,4 +26,4 @@ with open("input.txt", "r", encoding="utf8") as f:
         p1_score += part1(sor)
         p2_score += part2(sor)
 
-print(f"part 1: {p1_score}\npart 2: {p2_score}")
+print(f"\n\nAOC2022 Day 2: Rock Paper Scissors\npart 1: {p1_score}\npart 2: {p2_score}")

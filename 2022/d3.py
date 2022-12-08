@@ -23,4 +23,4 @@ with open("input.txt", "r", encoding="utf8") as f:
         p1_sum += part1(sor)
         p2_sum += part2(sor)
         
-print(f"part 1: {p1_sum}\npart 2: {p2_sum}")
+print(f"\n\nAOC2022 Day 3: Rucksack Reorganization\npart 1: {p1_sum}\npart 2: {p2_sum}")

@@ -7,4 +7,4 @@ with open("input.txt", "r", encoding="utf8") as f:
         else: calories += int(sor)
 
 elfs.sort(reverse=True)
-print(f"part 1: {elfs[0]}\npart 2: {elfs[0]+elfs[1]+elfs[2]}")
+print(f"\n\nAOC2022 Day 1: Calorie Counting\npart 1: {elfs[0]}\npart 2: {elfs[0]+elfs[1]+elfs[2]}")

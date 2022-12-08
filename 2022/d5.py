@@ -19,7 +19,7 @@ with open("input.txt", "r", encoding="utf8") as f:
                 p1_sol[int(orders[2])-1].insert(0, p1_sol[int(orders[1])-1].pop(0))
                 p2_sol[int(orders[2])-1].insert(i, p2_sol[int(orders[1])-1].pop(0))
 
-print("part 1: ", end="")
+print("\n\nAOC2022 Day 5: Supply Stacks\npart 1: ", end="")
 for crate in p1_sol: print(crate[0], end="")
 print("\npart 2: ", end="")
 for crate in p2_sol: print(crate[0], end="")

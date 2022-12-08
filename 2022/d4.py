@@ -9,4 +9,4 @@ with open("input.txt", "r", encoding="utf8") as f:
             p2_contain += 1
         pair.clear()
 
-print(f"part 1: {p1_fullcontain}\npart 2: {p2_contain}")
+print(f"\n\nAOC2022 Day 4: Camp Cleanup\npart 1: {p1_fullcontain}\npart 2: {p2_contain}")
