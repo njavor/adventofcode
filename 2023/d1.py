@@ -1,30 +1,18 @@
-p1_sum, p2_sum = 0, 0
-with open("input.txt", "r", encoding="utf8") as f:
-    for sor in f:
-        p1_numbers, p2_numbers = [], []
-        for i in range(len(sor)):
-            try:
-                if not int(sor[i]) == None: 
-                    p1_numbers.append(sor[i])
-                    p2_numbers.append(sor[i])
-            except:
-                match sor[i]:
-                    case "o":
-                        if i <= len(sor)-3 and sor[i:i+3] == "one": p2_numbers.append('1')
-                    case "t":
-                        if i <= len(sor)-3 and sor[i:i+3] == "two": p2_numbers.append('2')
-                        if i <= len(sor)-5 and sor[i:i+5] == "three": p2_numbers.append('3')
-                    case "f":
-                        if i <= len(sor)-4 and sor[i:i+4] == "four": p2_numbers.append('4')
-                        if i <= len(sor)-4 and sor[i:i+4] == "five": p2_numbers.append('5')
-                    case "s":
-                        if i <= len(sor)-3 and sor[i:i+3] == "six": p2_numbers.append('6')
-                        if i <= len(sor)-5 and sor[i:i+5] == "seven": p2_numbers.append('7')
-                    case 'e':
-                        if i <= len(sor)-5 and sor[i:i+5] == "eight": p2_numbers.append('8')
-                    case "n":
-                        if i <= len(sor)-4 and sor[i:i+4] == "nine": p2_numbers.append('9')
-        p1_sum += int(p1_numbers[0]+p1_numbers[len(p1_numbers)-1])
-        p2_sum += int(p2_numbers[0]+p2_numbers[len(p2_numbers)-1])
+sums, numdict = [0,0], {"one":['1',3], "two":['2',3] , "three":['3',5], "four":['4',4], "five":['5',4], "six":['6',3], "seven":['7',5], "eight":['8',5], "nine":['9',4]}
 
-print(f"\n\nAOC2023 Day 1: Trebuchet?!\npart 1: {p1_sum}\npart 2: {p2_sum}")
+with open("input.txt", "r", encoding="utf8") as f:
+    for line in f:
+        numlists = [[],[]]
+        for i in range(len(line)):
+            try:
+                if not int(line[i]) == None:
+                    for numlist in numlists:
+                        numlist.append(line[i])
+            except:
+                for num in numdict:
+                    if i <= len(line)-numdict[num][1] and line[i:i+numdict[num][1]] == num: 
+                        numlists[1].append(numdict[num][0])
+        for i in range(len(sums)):
+            sums[i] += int(numlists[i][0] + numlists[i][len(numlists[i])-1])
+
+print(f"\n\nAoC 2023 - Day 1: Trebuchet?!\n Part One: {sums[0]}\n Part Two: {sums[1]}\n")
